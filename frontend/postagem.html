@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR" ng-app="blogMax">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link href="https://getbootstrap.com/docs/4.6/examples/album/album.css" rel="stylesheet">
+    <title>Dienifer Ripl</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/dg.png" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+
+<body id="page-top">
+
+    <h1>sono</h1>
+
+    <div class="container">
+        <div class="row mb-2" ng-controller="RestMax">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">{{ publicacoes.thumbImageAltText }}</strong>
+                        <h3 class="mb-0">{{ publicacao.title }}</h3>
+                        <p class="card-text mb-auto">{{ publicacoes.description }}</p>
+                    </div>
+                    <div class="col-auto d-lg-block div-image">
+                        <img style="width: 300px;"
+                        ng-src="https://api-rest-post-diegocandido.herokuapp.com{{ publicacao.thumbImage }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+</html>
