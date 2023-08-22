@@ -8,16 +8,14 @@ angular.module('blog').controller('Rest', function ($scope, $http) {
 });
 
 angular.module('blogMax', []);
-angular.module('blog').controller('RestMax', function ($scope, $http) {
-  $http.get('https://api-rest-post-diegocandido.herokuapp.com/postagens/').
+angular.module('blogMax').controller('RestMax', function ($scope, $http) {
+  $http.get('https://api-rest-post-diegocandido.herokuapp.com/postagem/2').
     success(function (data) {
-      var id =1;
       $scope.publicacoes = data;
-      id++;
     }
     );
 });
-
+/*
 angular.module('blogMax', []);
 angular.module('blogMax').controller('RestMax', function ($scope, $http, $location){
   var absUrl = $location.absUrl();
@@ -26,11 +24,11 @@ angular.module('blogMax').controller('RestMax', function ($scope, $http, $locati
   console.log($location);
   $http({
     method: 'GET',
-    url: 'https://api-rest-post-diegocandido.herokuapp.com/postagem/'+id
+    url: 'https://api-rest-post-diegocandido.herokuapp.com/postagem/'+postId
   }).then(function(data){
     $scope.publicacoes = data.data;
     console.log(data.data);
   },function (error){
 
   });
-})
+})*/

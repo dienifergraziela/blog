@@ -16,26 +16,28 @@
 
 <body id="page-top">
 
-    <h1>sono</h1>
-
-    <div class="container">
+    <div class="container" id="new">
         <div class="row mb-2" ng-controller="RestMax">
-            <div class="col-md-6">
+            <div class="col-md-12" ng-controller="RestMax">
                 <div
                     class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-primary">{{ publicacoes.thumbImageAltText }}</strong>
-                        <h3 class="mb-0">{{ publicacao.title }}</h3>
+                        <h3 class="mb-0">{{ publicacoes.title }}</h3>
                         <p class="card-text mb-auto">{{ publicacoes.description }}</p>
+                        <p style="color: #fb3f00;">{{ publicacoes.profileName }}</p>
+                        <p>{{ publicacoes.postDate }}</p>
+                        <a href="./index.html"><button type="button" class="btn btn-outline-dark">voltar</button></a>
                     </div>
                     <div class="col-auto d-lg-block div-image">
                         <img style="width: 300px;"
-                        ng-src="https://api-rest-post-diegocandido.herokuapp.com{{ publicacao.thumbImage }}">
+                            ng-src="https://api-rest-post-diegocandido.herokuapp.com{{ publicacoes.thumbImage }}">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
