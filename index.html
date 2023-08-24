@@ -82,27 +82,28 @@
                 <h2 class="section-heading text-uppercase">Notícias</h2>
                 <h3 class="section-subheading text-muted">nada a ver comigo mas que podem te interessar</h3>
             </div>
-            <a href="./postagem.html">
-                <div class="album py-5 bg-light">
-                    <div class="container">
-                        <div class="row" ng-controller="Rest">
-                            <div class="col-md-4" ng-repeat="publicacao in publicacoes">
-                                <div class="card mb-4 shadow-sm">
-                                    <img
-                                        ng-src="https://api-rest-post-diegocandido.herokuapp.com{{ publicacao.thumbImage }}">
-                                    <div class="card-body">
-                                        <p class="card-text">{{ publicacao.title }}</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <small class="text-muted">{{ publicacao.description }}</small>
-                                        </div>
-                                    </div>
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <div class="row" ng-controller="Rest">
+                        <div class="col-md-4" ng-repeat="publicacao in publicacoes">
+                            <div class="card mb-4 shadow-sm">
+                                <img
+                                    ng-src="https://api-rest-post-diegocandido.herokuapp.com{{ publicacao.thumbImage }}">
+                                <div class="card-body">
+                                    <p class="card-text">{{ publicacao.title }}</p>
                                 </div>
+                                <a href="./postagem.html">
+                                    <button class="btn btn-outline-dark" style="margin-left: 10vw;">Veja mais</button>
+                                </a>
                             </div>
+                           
                         </div>
-
+                        
                     </div>
+
                 </div>
-            </a>
+            </div>
+
 
     </section>
 
